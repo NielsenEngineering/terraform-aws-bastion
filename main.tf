@@ -246,4 +246,6 @@ resource "aws_autoscaling_group" "bastion_auto_scaling_group" {
   lifecycle {
     create_before_destroy = true
   }
+
+  tags   = ["${local.tags_asg_format}"]
 }
